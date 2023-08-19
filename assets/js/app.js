@@ -31,7 +31,7 @@ userForm.addEventListener("submit",async (eve)=>{
     eve.preventDefault();
     let userUrl=`${baseUrl}/${user.value}`
     //cl(userUrl)
-
+eve.target.reset()
     try {
         let res=await makeApicall(userUrl)
        // let data=JSON.parse(res)
@@ -43,7 +43,7 @@ userCard.classList.remove("d-none")
 userCard.innerHTML=` <img src="${res.avatar_url}alt="user">
 <div class="card-body">
   <h5 class="card-title">${res.name}</h5>
-  <h6 class="card-subtitle my-4 "><span>${res.followers} Followers </span><span>${res.following} Following </span><span>${res.public_repos} Repos</span></h6>
+  <h6 class="card-subtitle my-4 d-flex justify-content-between"><span>${res.followers} Followers </span><span>${ res.following} Following </span><span>${ res.public_repos} Repos</span></h6>
 ${repoUl(repoList)}
 </div>`
     } catch (err) {

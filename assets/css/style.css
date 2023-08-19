@@ -24,6 +24,7 @@ body {
 .card{
     background-color:rgb(92, 19, 160) ;
     color: white;
+    flex-direction: row !important;
 }
 
 .card img{
@@ -49,6 +50,12 @@ body {
 
 @media all and (max-width:992px){
     .card{
-        flex-direction: row;
+        flex-direction: column !important;
+    }
+    .card-subtitle{
+        justify-content: flex-start !important;
+    }
+    .card-subtitle span{
+        flex-grow: 1;
     }
 }
