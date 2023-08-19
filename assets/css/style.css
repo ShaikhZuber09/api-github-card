@@ -1,0 +1,54 @@
+body {
+    background-color: rgb(31, 31, 81);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#user,#user:focus,#user:hover,#user:active {
+    border: none;
+    font-weight: 600;
+    font-size: 20px;
+    color: white;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    background-color: rgb(92, 19, 160);
+}
+
+
+#user::placeholder{
+    color: rgb(191, 187, 187);
+}
+
+.card{
+    background-color:rgb(92, 19, 160) ;
+    color: white;
+}
+
+.card img{
+    margin: 2rem auto;
+    width: 150px;
+    height:150px ;
+    border-radius: 100%;
+    border: 10px solid rgb(31, 31, 81);
+}
+
+.card a{
+    text-decoration: none;
+    cursor: pointer;
+    display: inline-block;
+    margin-bottom: 8px;
+    padding: 5px 8px;
+    line-height: 1.8;
+    color: white;
+    box-shadow: 0 10px 30px rgba(65, 65, 65,.8);
+    background-color: rgb(31, 31, 81);
+
+}
+
+@media all and (max-width:992px){
+    .card{
+        flex-direction: row;
+    }
+}
